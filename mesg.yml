@@ -1,0 +1,35 @@
+name: Logic
+description: Logical comparisons over data
+sid: logic
+tasks:
+  pick:
+    description: Pick data when conditions are met
+    inputs:
+      oneOf:
+        description: Pick one of the data
+        type: Object
+        repeated: true
+        object:
+          is:
+            description: Data to compare
+            type: Any
+          equal:
+            description: Data to compare against for equality 
+            type: Any
+          use:
+            description: Data to pick if condition is met
+            type: Any
+      otherwiseUse:
+        description: Data to pick if non of the conditions aren't met.
+        type: Any
+        optional: true
+    outputs:
+      success:
+        data:
+          data:
+            description: Filled from 'use' or 'otherwiseUse' input parameters or with empty object data by default
+            type: Any
+      failure:
+        data:
+          message:
+            type: String
