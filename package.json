@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.11",
-    "mesg-js": "^2.0.1"
+    "@liteflow/service": "^1.0.7",
+    "lodash": "^4.17.11"
   }
 }

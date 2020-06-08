@@ -1,5 +1,5 @@
-const mesg = require('mesg-js').service()
+const liteflow = new (require('@liteflow/service'))()
 
-mesg.listenTask({
+liteflow.listenTask({
   pick: require('./tasks/pick')
 })
